@@ -1,7 +1,11 @@
 import cv2
 import numpy as np
 
-
+'''
+灰階處理: 主要是用來降低運算量
+高斯模糊: 用來降低影響雜訊，但是會使得影像變得模糊
+Hough Transform: 找出窗點最多以決定(m,n)的直
+'''
 # 取得邊緣影像
 def get_edge(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # 灰階處理
